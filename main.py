@@ -8,3 +8,4 @@ file_list = np.load('picked_uiuc.npy', allow_pickle=True)
 # coarse mesh
 for airfoil_file in tqdm(file_list, desc="Get Coarse Mesh:"):
     get_mesh(airfoil_file, mesh_size=0.01, store_path='./Meshes/fine', optimizer=False)
+    get_config(airfoil_file, store_path='./Meshes/fine', template_path='inv_NACA0012.cfg')

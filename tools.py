@@ -43,7 +43,7 @@ def get_mesh(airfoil_file, mesh_size, store_path, optimizer=True):
 
 def get_config(airfoil_file, store_path, template_path):
     f = open(template_path, 'r', encoding='utf-8')
-    f1 = open(os.path.join(store_path, airfoil_file[:-4]+'.cfg'))
+    f1 = open(os.path.join(store_path, airfoil_file[:-4]+'.cfg'), 'w', encoding='utf-8')
     lines = f.readlines()
     for i in range(len(lines)):
         if 'MESH_FILENAME= mesh_NACA0012_inv.su2' in lines[i]:
