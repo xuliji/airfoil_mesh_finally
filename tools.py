@@ -63,7 +63,7 @@ def get_config(airfoil_file, store_path, template_path):
 
 def Computer(airfoil_file, work_path):
     config_name = airfoil_file[:-4]+'.cfg'
-    child = subprocess.check_output('su2_cfd'+config_name, cwd=work_path, shell=False)
+    child = subprocess.check_output('su2_cfd '+config_name, cwd=work_path, shell=False)
     print(str(child, encoding='utf-8'))
 
 
