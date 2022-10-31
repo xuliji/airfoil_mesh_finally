@@ -8,7 +8,7 @@ import meshio
 import subprocess
 
 def get_mesh(airfoil_file, mesh_size, store_path, optimizer=True):
-    data = np.loadtxt("./picked_uiuc/" + airfoil_file)[:-1]
+    data = np.loadtxt("./MMOE_MFM_test/" + airfoil_file)[:-1]
     geometry = pygmsh.geo.Geometry()
     model = geometry.__enter__()
     airfoil = model.add_polygon(data, holes=None, mesh_size=mesh_size)
