@@ -20,7 +20,7 @@ def get_mesh(airfoil_file, mesh_size, store_path, optimizer=True):
     # channel_lines = [model.add_line(points[i], points[i + 1])
     #                  for i in range(-1, len(points) - 1)]
     
-    channel_loop = model.add_circle([0.5, 0.0], 1.5, mesh_size=10*mesh_size)
+    channel_loop = model.add_circle([0.5, 0.0], 3.0, mesh_size=10*mesh_size)
     plane_surface = model.add_plane_surface(channel_loop.curve_loop, holes=[airfoil.curve_loop])
     model.synchronize()
     volume_marker = 6
